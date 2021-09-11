@@ -3,7 +3,14 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import os
 
+try:
+    os.system("mkdir music")
+except:
+    pass
+try:
 os.system("rm -rf music/*")
+except:
+    pass
 
 app = Flask(__name__)
 limiter = Limiter(app, key_func=get_remote_address)
