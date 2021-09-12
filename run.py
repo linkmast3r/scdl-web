@@ -8,7 +8,7 @@ try:
 except:
     pass
 try:
-os.system("rm -rf music/*")
+    os.system("rm -rf music/*")
 except:
     pass
 
